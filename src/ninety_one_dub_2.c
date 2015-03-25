@@ -273,7 +273,7 @@ static void set_container_image(GBitmap **bmp_image, BitmapLayer *bmp_layer, con
   *bmp_image = gbitmap_create_with_resource(resource_id);
   GRect frame = (GRect) {
     .origin = origin,
-    .size = (*bmp_image)->bounds.size
+    .size = {144, 168}
   };
   bitmap_layer_set_bitmap(bmp_layer, *bmp_image);
   layer_set_frame(bitmap_layer_get_layer(bmp_layer), frame);
@@ -493,7 +493,7 @@ static void init(void) {
   separator_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_SEPARATOR);
   GRect frame = (GRect) {
     .origin = { .x = 69, .y = 91 },
-    .size = separator_image->bounds.size
+    .size = {144, 168}
   };
   separator_layer = bitmap_layer_create(frame);
   bitmap_layer_set_bitmap(separator_layer, separator_image);
@@ -502,7 +502,7 @@ static void init(void) {
   separator_med_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_MED_SEPARATOR);
   GRect frame_med = (GRect) {
     .origin = { .x = 57, .y = 93 },
-    .size = separator_image->bounds.size
+    .size = {144, 168}
   };
   separator_med_layer = bitmap_layer_create(frame_med);
   bitmap_layer_set_bitmap(separator_med_layer, separator_med_image);
@@ -512,7 +512,7 @@ static void init(void) {
   meter_bar_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_METER_BAR);
   GRect frame2 = (GRect) {
     .origin = { .x = 17, .y = 43 },
-    .size = meter_bar_image->bounds.size
+    .size = {144, 168}
   };
   meter_bar_layer = bitmap_layer_create(frame2);
   bitmap_layer_set_bitmap(meter_bar_layer, meter_bar_image);
@@ -521,7 +521,7 @@ static void init(void) {
   bluetooth_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BLUETOOTH);
   GRect frame3 = (GRect) {
     .origin = { .x = 33, .y = 43 },
-    .size = bluetooth_image->bounds.size
+    .size = {144, 168}
   };
   bluetooth_layer = bitmap_layer_create(frame3);
   bitmap_layer_set_bitmap(bluetooth_layer, bluetooth_image);
@@ -530,7 +530,7 @@ static void init(void) {
   battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY);
   GRect frame4 = (GRect) {
     .origin = { .x = 111, .y = 43 },
-    .size = battery_image->bounds.size
+    .size = {144, 168}
   };
   battery_layer = bitmap_layer_create(frame4);
   battery_image_layer = bitmap_layer_create(frame4);
